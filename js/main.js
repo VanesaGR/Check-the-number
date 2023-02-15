@@ -6,6 +6,7 @@ const numberTryInput = document.querySelector('.js-inputNumber');
 const button = document.querySelector('.js-button');
 const clue = document.querySelector('.js-clue');
 const guess = document.querySelector('.js-try');
+const numeralTryImput = parseInt(numberTryInput.value);
 
 let test = 0; //contador para acumular los intentos
 
@@ -30,12 +31,12 @@ function checkInput() {
 //función para comprobar el número
 
 function checkNumber(){    
-    if(randomNumber=== parseInt(numberTryInput.value)){
+    if(randomNumber=== numeralTryImput){
         writeMessage("Has ganado campeona!!!");
         test++;
-    }else if(parseInt(numberTryInput.value)<=0 || parseInt(numberTryInput.value)>100){
+    }else if(numeralTryImput<=0 || numeralTryImput>100){
         writeMessage("El número debe estar entre 1 y 100");
-    }else if(randomNumber>parseInt(numberTryInput.value)){
+    }else if(randomNumber>numeralTryImput){
         writeMessage("El número es demasiado bajo");
         test++;
     }else if(randomNumber<parseInt(numberTryInput.value)){
