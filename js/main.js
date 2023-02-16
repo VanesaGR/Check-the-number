@@ -39,7 +39,7 @@ function checkNumber(){
     }else if(randomNumber>numeralTryImput){
         writeMessage("El número es demasiado bajo");
         test++;
-    }else if(randomNumber<parseInt(numberTryInput.value)){
+    }else if(randomNumber<numeralTryImput){
         writeMessage("El número es demasiado alto");
         test++;
     }
