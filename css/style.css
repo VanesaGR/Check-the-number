@@ -4,10 +4,13 @@
     box-sizing: border-box;
 }
 
-.guess-number{
-    margin: 3rem;
-    font-size: bold;
-    color: grey;
+.body{
+    background-color: #03112b;
+    color: #ffce08;
+}
+
+.banner{
+    width: 100vw;
 }
 
 .form{
@@ -17,20 +20,64 @@
 
 .label{
     font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
     padding-bottom: 3rem;
+
+    @media all and (min-width: 1200px){
+        font-size: 24px;
+    }
 }
 
 .button{
-    margin-top: 1rem;
-    background-color: aquamarine;
+    margin-top: 2rem;
+    background-color: lightblue;
+    color: #03112b;
     font-size: 18px;
+    font-weight: bold;
     padding:5px;
     border-radius:5px;
+
+    @media all and (min-width:468px){
+        width: 120px;
+    }
+
+    @media all and (min-width: 1200px){
+        font-size: 24px;
+    }
 }
 
 .clue, .try{
+    height: 60px;
     margin:3rem;
     font-size: 18px;
+    font-weight: bold;
     border: 3px solid grey;
-    padding: 8px;
+    border-radius: 15px;
+    padding: 25px;
+    padding-left: 20px;
+
+    @media all and (min-width:768px){
+        width:70vw;
+    }
+
+    @media all and (min-width: 1200px){
+        font-size: 24px;
+        height: 80px;
+        
+    }
+}
+
+.inputNumber{
+    height: 40px;
+    margin-top: 1em;
+    text-align: center;
+    border: 2px solid #ffce08;
+    border-radius: 15px;
+
+    @media all and (min-width:1200px){
+        width: 30vw;
+        height: 60px;
+        font-size: 24px;
+    }
 }
