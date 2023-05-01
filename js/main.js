@@ -21,20 +21,22 @@ console.log(`El número es ${randomNumber}`);
 
 //el campo input no puede estar vacío
 function checkInput() {
-  if (numberTryInput.value === '') {
+  const numeralTryImput = parseInt(numberTryInput.value);
+  
+  if (isNaN(numeralTryImput) || numeralTryImput === '') {
     writeMessage('Intentalo :)');
   } else {
-    checkNumber();
+    checkNumber(numeralTryImput);
   }
 }
 
 //función para comprobar el número
 
-function checkNumber(){    
-    if(randomNumber=== numeralTryImput){
+function checkNumber(numeralTryImput){    
+    if(randomNumber === numeralTryImput){
         writeMessage("Has ganado campeona!!!");
         test++;
-    }else if(numeralTryImput<=0 || numeralTryImput>100){
+    }else if(numeralTryImput>100 || numeralTryImput<1){
         writeMessage("El número debe estar entre 1 y 100");
     }else if(randomNumber>numeralTryImput){
         writeMessage("El número es demasiado bajo");
@@ -57,16 +59,12 @@ function attempts(attempts){
     guess.innerHTML=attempts;
 }
 
-function checkAttempts(){
-    attempts(`Llevas ${test} intentos`);
-}
-
 //funcion manejadora
 
 function handleClick(event){
     event.preventDefault();
     checkInput();
-    checkAttempts();
+    attempts(test);
 }
 
 //el boton escucha
