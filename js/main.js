@@ -38,6 +38,7 @@ function checkNumber(numeralTryImput){
         test++;
     }else if(numeralTryImput>100 || numeralTryImput<1){
         writeMessage("El número debe estar entre 1 y 100");
+        test++;
     }else if(randomNumber>numeralTryImput){
         writeMessage("El número es demasiado bajo");
         test++;
