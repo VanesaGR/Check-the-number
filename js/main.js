@@ -6,7 +6,6 @@ const numberTryInput = document.querySelector('.js-inputNumber');
 const button = document.querySelector('.js-button');
 const clue = document.querySelector('.js-clue');
 const guess = document.querySelector('.js-try');
-const numeralTryImput = parseInt(numberTryInput.value);
 
 let test = 0; //contador para acumular los intentos
 
